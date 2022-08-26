@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String fileName = "INPUT";
         String format = ".TXT";
         String pathToFile = fileName + format;
@@ -38,6 +38,9 @@ public class Main {
                 fileWriter.write(currTime.getHours() + " " + currTime.getMinutes() + " " +
                         currTime.getSeconds() + "\n");
             }
+        }
+        catch (IOException e){
+            System.out.println(e);
         }
     }
 }
